@@ -1,3 +1,5 @@
+// [source_file] [key] [shift]
+
 #include <iostream>
 #include <random>
 #include <fstream>
@@ -29,7 +31,7 @@ int main(int argc, char* argv[])
         fOrigin >> sX;
         cSec = sX ^ iSec;
         fRandKey << cSec;
-        cSec = sX ^ (int)iUSec;
+        cSec = sX ^ iUSec[0];
         fUserKey << cSec;
     }
 
